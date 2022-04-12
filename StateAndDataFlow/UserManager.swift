@@ -14,7 +14,7 @@ final class UserManager: ObservableObject {
     
     @AppStorage("user") var isRegistered = false
     @AppStorage("user") var name = ""
-    
+   
     func save() {
         let encoder = JSONEncoder()
         if let data = try? encoder.encode(user) {
@@ -27,3 +27,5 @@ struct User: Codable {
     var isRegistered = false
     var name = ""
 }
+
+
